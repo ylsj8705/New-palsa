@@ -12,7 +12,7 @@
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="mesh type" type="string" value="read mesh file" />
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
       </ParameterList>
     </ParameterList>
@@ -42,7 +42,7 @@
     <ParameterList name="topL" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="40000" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -50,7 +50,7 @@
     <ParameterList name="top peat" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="30000" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -58,7 +58,7 @@
     <ParameterList name="sand" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="20000" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="cell" />
       </ParameterList>
@@ -66,7 +66,7 @@
     <ParameterList name="bottom mineral" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="10000" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Cell" />
       </ParameterList>
@@ -74,7 +74,7 @@
     <ParameterList name="west" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="5" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Face" />
       </ParameterList>
@@ -82,7 +82,7 @@
     <ParameterList name="east" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="3" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Face" />
       </ParameterList>
@@ -90,7 +90,7 @@
     <ParameterList name="north" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="4" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Face" />
       </ParameterList>
@@ -98,7 +98,7 @@
     <ParameterList name="south" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="6" />
-        <Parameter name="file" type="string" value="../4/mesh_fsets_50m.par" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="Face" />
       </ParameterList>
@@ -106,7 +106,7 @@
     <ParameterList name="surface" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="2" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/data/mesh_fsets_50m.par" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
@@ -114,13 +114,71 @@
     <ParameterList name="bottom face" type="ParameterList">
       <ParameterList name="region: labeled set" type="ParameterList">
         <Parameter name="label" type="string" value="1" />
-        <Parameter name="file" type="string" value="../data/mesh_fsets_50m.exo" />
+        <Parameter name="file" type="string" value="../data/4/mesh_fsets_50m.exo" />
         <Parameter name="format" type="string" value="Exodus II" />
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
     </ParameterList>
+    <ParameterList name="palsa surface left" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{ 12.5,1e+20}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="palsa surface right" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{37.5,-1e+20}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{50,1e+20}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="fen surface" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{12.5,-1e+20}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{37.5,1e+20}" />
+      </ParameterList>
+    </ParameterList>
     <ParameterList name="surface outlet" type="ParameterList">
       <ParameterList name="region: boundary" type="ParameterList">
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 1">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.724148}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 4">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.244148}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 7">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,48.884148}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 9">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,44.484148}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 11">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{25,0.5,49.230103}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 14">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{25,0.5,48.750103}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 17">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{25,0.5,47.390103}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="out 19">
+      <ParameterList name="region: point">
+        <Parameter name="coordinate" type="Array(double)" value="{25,0.5,42.990103}" />
       </ParameterList>
     </ParameterList>
   </ParameterList>
@@ -128,8 +186,9 @@
   <ParameterList name="cycle driver" type="ParameterList">
     <Parameter name="start time" type="double" value="0" />
     <Parameter name="start time units" type="string" value="d" />
-    <Parameter name="end time" type="double" value="365" />
+    <Parameter name="end time" type="double" value="36500" />
     <Parameter name="end time units" type="string" value="d" />
+    <Parameter name="restart from checkpoint file" type="string" value="../../run3/checkpoint179403.h5" />
 <!--    <Parameter name="restart from checkpoint file" type="string" value="checkpoint00453.h5" /> -->
     <ParameterList name="required times" type="ParameterList">
       <Parameter name="times start period stop" type="Array(double)" value="{ 0, 432000,-1}" />
@@ -255,7 +314,6 @@
           </ParameterList>
         </ParameterList>
       </ParameterList>
-
     </ParameterList>
 
     <ParameterList name="coupled SEB and permafrost" type="ParameterList">
@@ -1196,21 +1254,310 @@
   </ParameterList>
   <ParameterList name="visualization" type="ParameterList">
     <ParameterList name="domain" type="ParameterList">
-      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 10,-1}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 5,-1}" />
       <Parameter name="times start period stop 0 units" type="string" value="d" />
     </ParameterList>
     <ParameterList name="surface" type="ParameterList">
-      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 10,-1}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 5,-1}" />
       <Parameter name="times start period stop 0 units" type="string" value="d" />
     </ParameterList>
     <ParameterList name="snow" type="ParameterList">
-      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 10,-1}" />
+      <Parameter name="times start period stop 0" type="Array(double)" value="{ 0, 5,-1}" />
       <Parameter name="times start period stop 0 units" type="string" value="d" />
     </ParameterList>
   </ParameterList>
 
+  <ParameterList name="observations" type="ParameterList">
+    <ParameterList name="observation file" type="ParameterList">
+      <Parameter name="write interval" type="int" value="30" />
+      <Parameter name="observation output filename" type="string" value="observation.dat" />
+      <Parameter name="times start period stop" type="Array(double)" value="{0.0,5.0,-1.0}" />
+      <Parameter name="times start period stop units" type="string" value="d" />
+      <Parameter name="delimiter" type="string" value=" " />
+      <ParameterList name="observed quantities" type="ParameterList">
+        <ParameterList name="water content [mol]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_content" />
+          <Parameter name="region" type="string" value="subsurface domain" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface water content [mol]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_content" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="snow water equivalent [mol]" type="ParameterList">
+          <Parameter name="variable" type="string" value="snow-water_equivalent" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="evaporation rate [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-evaporative_flux" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="evaporation rate pals r [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-evaporative_flux" />
+          <Parameter name="region" type="string" value="palsa surface right" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="evaporation rate pals l [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-evaporative_flux" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="evaporation rate fen [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-evaporative_flux" />
+          <Parameter name="region" type="string" value="fen surface" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="heat conduction palsa_left">
+          <Parameter name="variable" type="string" value="surface-qE_conducted" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="integral" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="discharge [mol s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-mass_flux" />
+          <Parameter name="region" type="string" value="surface outlet" />
+          <Parameter name="location name" type="string" value="face" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+        </ParameterList>
+        <ParameterList name="surface-subsurface flux [mol s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="precipitation rain [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-precipitation_rain" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="precipitation snow [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="snow-precipitation" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="snow melt [m s^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="snow-melt" />
+          <Parameter name="region" type="string" value="surface domain" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="thaw depth pals r [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-thaw_depth" />
+          <Parameter name="region" type="string" value="palsa surface right" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="thaw depth pals l [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-thaw_depth" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="thaw depth fen [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-thaw_depth" />
+          <Parameter name="region" type="string" value="fen surface" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="water table depth pals r [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_table_depth" />
+          <Parameter name="region" type="string" value="palsa surface right" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="water table depth pals l [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_table_depth" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="water table depth fen [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_table_depth" />
+          <Parameter name="region" type="string" value="fen surface" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface temperature pals r [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-temperature" />
+          <Parameter name="region" type="string" value="palsa surface right" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface temperature pals l [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-temperature" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface temperature fen [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-temperature" />
+          <Parameter name="region" type="string" value="fen surface" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.02m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 1" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.02m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 1" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.02m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 1" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.5m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 4" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.5m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 4" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 0.5m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 4" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 1.86m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 7" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 1.86m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 7" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 1.86m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 7" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 6.26m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 9" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 6.26m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 9" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="pals 6.26m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 9" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.02m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 11" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.02m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 11" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.02m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 11" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.5m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 14" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.5m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 14" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 0.5m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 14" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 1.86m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 17" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 1.86m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 17" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 1.86m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 17" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 6.26m temperature [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="temperature" />
+          <Parameter name="region" type="string" value="out 19" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 6.26m saturation liquid" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_liquid" />
+          <Parameter name="region" type="string" value="out 19" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="fen 6.26m saturation ice" type="ParameterList">
+          <Parameter name="variable" type="string" value="saturation_ice" />
+          <Parameter name="region" type="string" value="out 19" />
+          <Parameter name="functional" type="string" value="point" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+      </ParameterList>
+    </ParameterList>
+  </ParameterList>
+
   <ParameterList name="checkpoint" type="ParameterList">
-    <Parameter name="times start period stop 0" type="Array(double)" value="{ 0,10,-1}" />
+    <Parameter name="times start period stop 0" type="Array(double)" value="{ 0,365,-1}" />
     <Parameter name="times start period stop 0 units" type="string" value="d" />
   </ParameterList>
 </ParameterList>
