@@ -119,12 +119,6 @@
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="palsa top" type="ParameterList">
-      <ParameterList name="region: box" type="ParameterList">
-        <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
-        <Parameter name="high coordinate" type="Array(double)" value="{ 2.5,1e+20}" />
-      </ParameterList>
-    </ParameterList>
     <ParameterList name="palsa surface left" type="ParameterList">
       <ParameterList name="region: box" type="ParameterList">
         <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
@@ -135,6 +129,18 @@
       <ParameterList name="region: box" type="ParameterList">
         <Parameter name="low coordinate" type="Array(double)" value="{37.5,-1e+20}" />
         <Parameter name="high coordinate" type="Array(double)" value="{50,1e+20}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="palsa top" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{ 2.5,1e+20}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="mid fen" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{20.,-1e+20}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{30.,1e+20}" />
       </ParameterList>
     </ParameterList>
     <ParameterList name="fen surface" type="ParameterList">
@@ -1426,14 +1432,26 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <ParameterList name="heat conduction palsa l">
+        <ParameterList name="ground h palsa l">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_energy_flux" />
           <Parameter name="region" type="string" value="palsa surface left" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <ParameterList name="heat conduction fen">
+        <ParameterList name="ground h fen">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_energy_flux" />
+          <Parameter name="region" type="string" value="fen surface" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="heat conduction palsa l">
+          <Parameter name="variable" type="string" value="surface-qE_conducted" />
+          <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="heat conduction fen">
+          <Parameter name="variable" type="string" value="surface-qE_conducted" />
           <Parameter name="region" type="string" value="fen surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
@@ -1480,15 +1498,27 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
+        <ParameterList name="snow depth pals top" type="ParameterList">
+          <Parameter name="variable" type="string" value="snow-depth" />
+          <Parameter name="region" type="string" value="palsa top" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
         <ParameterList name="snow depth fen" type="ParameterList">
           <Parameter name="variable" type="string" value="snow-depth" />
           <Parameter name="region" type="string" value="fen surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <ParameterList name="water table depth pals r [m]" type="ParameterList">
+        <ParameterList name="snow depth mid fen" type="ParameterList">
+          <Parameter name="variable" type="string" value="snow-depth" />
+          <Parameter name="region" type="string" value="mid fen" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="water table depth palsa top" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
-          <Parameter name="region" type="string" value="palsa surface right" />
+          <Parameter name="region" type="string" value="palsa top" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
@@ -1504,9 +1534,27 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
+        <ParameterList name="water table depth mid fen [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_table_depth" />
+          <Parameter name="region" type="string" value="mid fen" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
         <ParameterList name="ponded depth pals l [m]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-ponded_depth" />
           <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="ponded depth palsa top [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-ponded_depth" />
+          <Parameter name="region" type="string" value="palsa top" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="ponded depth mid fen [m]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-ponded_depth" />
+          <Parameter name="region" type="string" value="mid fen" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
@@ -1516,15 +1564,21 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
-        <ParameterList name="surface temperature pals r [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-temperature" />
-          <Parameter name="region" type="string" value="palsa surface right" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
         <ParameterList name="surface temperature pals l [K]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-temperature" />
           <Parameter name="region" type="string" value="palsa surface left" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface temperature pals top [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-temperature" />
+          <Parameter name="region" type="string" value="palsa top" />
+          <Parameter name="functional" type="string" value="average" />
+          <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="surface temperature mid fen [K]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-temperature" />
+          <Parameter name="region" type="string" value="mid fen" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>
