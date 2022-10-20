@@ -153,6 +153,42 @@
       <ParameterList name="region: boundary" type="ParameterList">
       </ParameterList>
     </ParameterList>
+    <ParameterList name="palsa surface left box" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20, -100}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{ 12.5,1e+20, 100}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="palsa surface right box" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{ 37.5,-1e+20, -100}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{ 50.,1e+20, 100}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="fen surface box" type="ParameterList">
+      <ParameterList name="region: box" type="ParameterList">
+        <Parameter name="low coordinate" type="Array(double)" value="{ 12.5,-1e+20, -100}" />
+        <Parameter name="high coordinate" type="Array(double)" value="{ 37.5,1e+20, 100}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="palsa surface left faces" type="ParameterList">
+      <ParameterList name="region: logical">
+        <Parameter name="operation" type="string" value="intersect" />
+        <Parameter name="regions" type="Array(string)" value="{surface, palsa surface left box}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="palsa surface right faces" type="ParameterList">
+      <ParameterList name="region: logical">
+        <Parameter name="operation" type="string" value="intersect" />
+        <Parameter name="regions" type="Array(string)" value="{surface, palsa surface right box}" />
+      </ParameterList>
+    </ParameterList>
+    <ParameterList name="fen surface faces" type="ParameterList">
+      <ParameterList name="region: logical">
+        <Parameter name="operation" type="string" value="intersect" />
+        <Parameter name="regions" type="Array(string)" value="{surface, fen surface box}" />
+      </ParameterList>
+    </ParameterList>
     <ParameterList name="out 1">
       <ParameterList name="region: point">
         <Parameter name="coordinate" type="Array(double)" value="{0.5,0.5,50.724148}" />
@@ -1455,6 +1491,27 @@
           <Parameter name="region" type="string" value="fen surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
+        </ParameterList>
+        <ParameterList name="heat advection palsa l">
+          <Parameter name="variable" type="string" value="advected_energy_flux" />
+          <Parameter name="region" type="string" value="palsa surface left faces" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="face" />
+        </ParameterList>
+        <ParameterList name="heat advection palsa r">
+          <Parameter name="variable" type="string" value="advected_energy_flux" />
+          <Parameter name="region" type="string" value="palsa surface right faces" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="face" />
+        </ParameterList>
+        <ParameterList name="heat advection fen">
+          <Parameter name="variable" type="string" value="advected_energy_flux" />
+          <Parameter name="region" type="string" value="fen surface faces" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="face" />
         </ParameterList>
         <ParameterList name="albedo pals l" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-albedo" />
