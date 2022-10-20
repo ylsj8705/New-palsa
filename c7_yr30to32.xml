@@ -119,12 +119,6 @@
         <Parameter name="entity" type="string" value="face" />
       </ParameterList>
     </ParameterList>
-    <ParameterList name="palsa top" type="ParameterList">
-      <ParameterList name="region: box" type="ParameterList">
-        <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
-        <Parameter name="high coordinate" type="Array(double)" value="{ 2.5,1e+20}" />
-      </ParameterList>
-    </ParameterList>
     <ParameterList name="palsa surface left" type="ParameterList">
       <ParameterList name="region: box" type="ParameterList">
         <Parameter name="low coordinate" type="Array(double)" value="{ 0,-1e+20}" />
@@ -206,7 +200,7 @@
     <Parameter name="start time units" type="string" value="d" />
     <Parameter name="end time" type="double" value="84680" />
     <Parameter name="end time units" type="string" value="d" />
-    <Parameter name="restart from checkpoint file" type="string" value="../c7/checkpoint517775.h5" />
+    <Parameter name="restart from checkpoint file" type="string" value="../c7/checkpoint485248.h5" />
 <!--    <Parameter name="restart from checkpoint file" type="string" value="checkpoint00453.h5" /> -->
     <ParameterList name="required times" type="ParameterList">
       <Parameter name="times start period stop" type="Array(double)" value="{ 0, 432000,-1}" />
